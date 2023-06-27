@@ -64,10 +64,11 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            padding: 0 20px; /* Add padding to create space for the button */
+            padding: 0 20px; /* Add padding to create space for the buttons */
         }
         
-        #download-button {
+        #download-button,
+        #about-button {
             color: white;
             font-family: 'Raleway', Arial, sans-serif;
             font-size: 18px;
@@ -78,7 +79,8 @@
             margin-right: 20px;
         }
         
-        #download-button:focus {
+        #download-button:focus,
+        #about-button:focus {
             outline: none;
         }
     </style>
@@ -93,6 +95,7 @@
     
     <div id="homebar">
         <button id="download-button" onclick="window.location.href='https://discord.gg/q65HP5742h'">Download on our Discord</button>
+        <button id="about-button" onclick="window.location.href='https://raw.githubusercontent.com/Cosmobuilder/NCW/main/about'">About</button>
     </div>
     
     <div id="overlay">
