@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nicotine Client</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        #video-container {
+            flex: 1;
+            position: relative;
+        }
+        
+        #video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        #overlay h1 {
+            color: white;
+            font-family: 'Raleway', Arial, sans-serif;
+            font-size: 72px;
+            margin-top: -50px; /* Adjust the value to position the text higher or lower */
+        }
+        
+        #overlay p {
+            color: white;
+            font-family: 'Raleway', Arial, sans-serif;
+            font-size: 36px;
+        }
+        
+        #homebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px; /* Adjust the height of the homebar */
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) to change transparency */
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px; /* Add padding to create space for the buttons */
+        }
+        
+        #download-button,
+        #about-button,
+        #home-button {
+            color: white;
+            font-family: 'Raleway', Arial, sans-serif;
+            font-size: 18px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        
+        #download-button:focus,
+        #about-button:focus,
+        #home-button:focus {
+            outline: none;
+        }
+        
+        
+        /* Additional styling for content section */
+        #content p {
+            padding: 20px;
+        }
+        
+        /* Added styling for about section */
+        #about-section {
+            padding: 90px;
+            font-size: 36px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.01); /* Adjust the alpha value (0.8) to change transparency */
+        }
+        
+        #about-section h1 {
+            font-size: 72px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Added styling for about title */
+        #about-title {
+            font-size: 60px;
+            color: black;
+            text-align: center;
+        }
+        
+        /* Added styling for h2 containers */
+        .h2-container {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        /* Added styling for little boxes */
+        .little-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .little-box {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+        }
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="homebar">
+        <button id="home-button" onclick="window.location.href='https://cosmobuilder.github.io/NCW/'">Home</button>
+        <button id="download-button" onclick="window.location.href='https://discord.gg/q65HP5742h'">Our Discord</button>
+        <button id="about-button" onclick="window.location.href='about.html'">About</button>
+    </div>
+
+    <div id="about-section">
+        <h1 id="about-title">about</h1>
+    </div>
+
+    <div class="h2-container">
+        <h2>Nicotine is an advanced, so-called "ghost client" for Minecraft version 1.8.9, based on Minecraft Forge. Nicotine is made for the purpose of giving yourself various utilities, which all give you an advantage without anyone noticing it, including many render-related modules.</h2>
+    </div>
+
+    <div class="h2-container">
+        <h2>WARNING: Use this client at your own risk. Ghost clients are not fully undetectable. The Nicotine development team is not responsible for any damage you cause to your Minecraft accounts.</h2>
+    </div>
+    
+    <div class="little-boxes">
+        <div class="little-box"></div>
+        <div class="little-box"></div>
+        <div class="little-box"></div>
+    </div>
+    
+</body>
+</html>
