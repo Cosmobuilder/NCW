@@ -84,6 +84,22 @@
         #home-button:focus {
             outline: none;
         }
+        
+        /* Added section */
+        #content {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px; /* Adjust the height of the content section */
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) to change transparency */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Raleway', Arial, sans-serif;
+            font-size: 24px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -105,7 +121,9 @@
         <p>A Minecraft Java ghost client for 1.8.9</p>
     </div>
     
-    <!-- Your website content here -->
-    
+    <div id="content">
+        <!-- Your website content here -->
+        <p>This is the additional section of the website below the video.</p>
+    </div>
 </body>
 </html>
