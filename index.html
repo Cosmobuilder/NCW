@@ -7,15 +7,14 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         #video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            flex: 1;
+            position: relative;
         }
         
         #video-container video {
@@ -25,19 +24,19 @@
         }
         
         #overlay {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) to change transparency */
-            z-index: 999;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             pointer-events: none; /* Add this line to make the overlay transparent for pointer events */
+            z-index: 1;
         }
         
         #overlay h1 {
@@ -87,11 +86,8 @@
         
         /* Added section */
         #content {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 200px; /* Adjust the height of the content section */
+            flex: 1;
+            overflow-y: auto;
             background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) to change transparency */
             color: white;
             display: flex;
@@ -99,6 +95,11 @@
             justify-content: center;
             font-family: 'Raleway', Arial, sans-serif;
             font-size: 24px;
+        }
+        
+        /* Additional styling for content section */
+        #content p {
+            padding: 20px;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -108,6 +109,10 @@
         <video autoplay muted loop>
             <source src="https://user-images.githubusercontent.com/25800857/132989930-9dc2ca4c-f981-4c1c-befd-5093b246456c.mp4" type="video/mp4">
         </video>
+        <div id="overlay">
+            <h1>Nicotine</h1>
+            <p>A Minecraft Java ghost client for 1.8.9</p>
+        </div>
     </div>
     
     <div id="homebar">
@@ -116,14 +121,10 @@
         <button id="about-button" onclick="window.location.href='https://raw.githubusercontent.com/Cosmobuilder/NCW/main/about'">About</button>
     </div>
     
-    <div id="overlay">
-        <h1>Nicotine</h1>
-        <p>A Minecraft Java ghost client for 1.8.9</p>
-    </div>
-    
     <div id="content">
         <!-- Your website content here -->
         <p>This is the additional section of the website below the video.</p>
+        <p>You can add more content and it will be scrollable if needed.</p>
     </div>
 </body>
 </html>
